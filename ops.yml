@@ -1,13 +1,13 @@
 # for more info visit https://cto.ai/docs
 version: "1"
 services:
-  - name: testo-cto-service:0.1.0
+  - name: testo-cto-service:0.1.3
     description: This is a sample application
     run: node /ops/index.js
     port: [ '8080:8080' ]
     domain: ""
     events:
-     - "github:jossemargt-cto-ai/testo-cto-service:pull_request.merged"
+     - "github:jossemargt-cto-ai/testo-cto-service:pull_request.opened"
     trigger:
      - build
      - publish
